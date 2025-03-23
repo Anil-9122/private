@@ -1,3 +1,4 @@
 git fetch origin
-git checkout main
-git merge origin/branch1
+git checkout branch2
+git merge origin/branch3
+git branch -d branch3
