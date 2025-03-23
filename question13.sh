@@ -1,17 +1,20 @@
 #!/bin/bash
 
-# Create a new branch
-git checkout -b branch13
+# Step 1: Create a new branch for the assignment
+git checkout -b assignment-branch
 
-# Remove all .sh files from the branch
-git rm *.sh
+# Step 2: Remove all .sh files from other questions
+rm *.sh
 
-# Create and add file13.txt
-touch file13.txt
+# Step 3: Create a new text file named file13.txt
+echo "This is file13.txt for Question 13." > file13.txt
+
+# Step 4: Stage the new file and commit the changes
 git add file13.txt
+git commit -m "Removed .sh files from other questions and added file13.txt"
 
-# Commit the changes
-git commit -m "Add file13.txt and remove .sh files"
+# Step 5: Push the new branch to GitHub
+git push origin assignment-branch
 
-# Push the new branch to GitHub
-git push -u origin branch13
+# Step 6: Verify if the new branch has been pushed correctly
+git branch -r  # Check remote branches to confirm the push
